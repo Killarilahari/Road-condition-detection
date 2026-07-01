@@ -4,7 +4,7 @@ A machine learning system that classifies road surface conditions in real time u
 
 ---
 
-# 📌 Overview
+## 📌 Overview
 
 Traditional road monitoring relies on manual surveys that are expensive and infrequent. This project turns every bike ride into a passive road quality scan. Sensor data from a bike-mounted IMU (Inertial Measurement Unit) is fed into a trained Random Forest classifier that labels each moment of the ride as one of four conditions:
 
@@ -17,7 +17,7 @@ Traditional road monitoring relies on manual surveys that are expensive and infr
 
 ---
 
-# 📊 Results
+## 📊 Results
 
 | Metric | Value |
 |--------|-------|
@@ -37,7 +37,7 @@ Traditional road monitoring relies on manual surveys that are expensive and infr
 
 ---
 
-# 🧠 How It Works
+## 🧠 How It Works
 
 Raw sensor readings (acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z) are noisy on their own. The key to accuracy is **feature engineering** — converting raw readings into vibration-intensity patterns over a rolling 0.5-second window:
 
@@ -64,7 +64,7 @@ road-condition-detection/
 
 ---
 
-# ▶️ How to Run
+## ▶️ How to Run
 
 **1. Clone the repository**
 ```bash
@@ -88,7 +88,7 @@ python road_condition_detection.py
 
 ---
 
-# 📈 Output Visualizations
+## 📈 Output Visualizations
 
 **Confusion Matrix** — shows per-class prediction accuracy on the test set.
 
@@ -111,7 +111,7 @@ Overall Verdict         : Moderate road quality - some rough patches detected.
 
 ---
 
-# 🔧 Tech Stack
+## 🔧 Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
@@ -122,13 +122,13 @@ Overall Verdict         : Moderate road quality - some rough patches detected.
 
 ---
 
-# 🌍 Real-World Deployment
+## 🌍 Real-World Deployment
 
 The trained model can be deployed on a **Raspberry Pi + MPU-6050 sensor** mounted to a bike for real-time, on-device classification at under 50ms per prediction cycle. With GPS tagging, data from multiple riders can be aggregated into a **city-wide road quality heat map** — crowd-sourced road monitoring with zero dedicated infrastructure.
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
 **Killari Lahari**  
 B.Tech – Computer Science & Engineering (AI & ML)  
