@@ -1,29 +1,3 @@
-"""
-Road Condition Detection Using Bike Sensor Data
-================================================
-
-What this script does
-----------------------
-1. Loads accelerometer + gyroscope data collected from a bike-mounted sensor
-   (columns: time, acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, speed_kmph, label)
-2. Cleans the data and engineers vibration-based features that actually
-   correlate with road roughness (these are the features that make the
-   model accurate -- raw axis values alone are noisy and not very useful).
-3. Trains a Random Forest classifier to label road condition as:
-   Smooth | Rough | Pothole | Speed Breaker
-4. Prints an easy-to-read report (accuracy, per-class performance,
-   feature importance) and saves two plots:
-     - confusion_matrix.png
-     - vibration_timeline.png  -> a literal "ride" chart anyone can read
-       at a glance to tell which road segments were bad.
-5. Has a `predict_new_window()` function so the trained model can be
-   reused on a fresh window of sensor readings later.
-
-If you have a real CSV from your own sensor logger, just change
-DATA_PATH below to its location -- the column names must match the
-ones described above (or update COLUMN MAP near the top).
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
